@@ -1,0 +1,607 @@
+body{
+  font-family: $font-family-SF;
+}
+.container{
+  max-width: 1140px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.reverse{
+  flex-direction: row-reverse;
+}
+h1{
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: bold;
+}
+h3{ 
+  font-size: 24px;
+  line-height: 36px;   
+  font-weight: bold;
+}
+.mr29{
+  margin-right: 29px;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  ul{
+    display: flex;
+    align-items: center;
+    li{
+      margin-left: 32px;
+      a{
+        text-decoration: none;
+        color: $gray;
+        font-size: 20px;
+        line-height: 30px;
+        &:hover{
+          color: $gold;
+        }
+      }
+      i{
+        margin-right: 2px;
+      }
+    }
+    .pc-hidden{
+      display: none;
+    }
+  }
+  @include mobile{
+    .mobile-hidden{
+      display: none;
+    }
+    ul{
+      .pc-hidden{
+        display: block;
+        position: relative;
+        color: $gray;
+        p{
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: $brown;
+        color: $white;
+        border: 1px solid $brown;
+        border-radius: 50%;
+        font-size: 12px;
+        line-height: 12px;
+        padding-right: 2px;
+        padding-left: 2px;
+        }
+      }
+    }
+  }
+}
+.banner{
+  height: 870px;
+  overflow: hidden;
+  position: relative;
+  @include mobile{
+    height: 480px;
+  }
+  img{
+    position: absolute;
+    top: -140px;
+    @include mobile{
+      top: 0px;
+      object-fit: cover;
+      height: 480px;
+    }
+  }
+  .banner-text{
+    position: relative;
+  }
+  .banner-text-content{
+    position: absolute;
+    top:295px;
+    left: 680px;
+    max-width: 445px;
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+    @include mobile{
+      max-width: 567px;
+      padding-right: 15px;
+      top: 101px;
+      left: 15px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    h2{
+      font-size: 40px;
+      line-height: 60px;
+      font-weight: bold;
+      @include mobile{
+        font-size: 32px;
+        line-height: 48px;
+      }
+    }
+    a{
+      display: block;
+      width: 350px;
+      height: 60px;
+      text-decoration: none;
+      color: $white;
+      border: 2px solid $white;
+      border-radius: 30px;
+      line-height: 60px;
+      padding-left: 120px;
+      margin-top: 16px;
+      @include mobile{
+        width: 345px;
+      }
+      &:hover{
+        background:$white;
+        color: $black;
+      }
+    }
+  }
+}
+.content{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @include mobile{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  li{
+    display: flex;
+    @include mobile{
+      flex-direction: column;
+    }
+  }
+  img{
+    width: 555px;
+    height: 555px;
+    object-fit: cover;
+    object-position: left top;
+    @include mobile{
+      max-height: 350px;
+      object-position: left;
+    }
+  }
+  .content-img4{
+    height: 1080px;
+    object-position: top right;
+    @include mobile{
+      max-height: 680px;
+      object-position: top bottom;
+    }
+  }
+  .content-text{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    @include mobile{
+      max-width: 567px;
+      margin-right: 0px;
+      margin-left: 0px;
+      margin-top: 8px;
+    }
+    p{
+      font-size: 20px;
+      line-height: 30px;
+    }
+    a{
+      font-size: 16px;
+      line-height: 24px;
+      color: $gold;
+      text-decoration: none;
+      margin-top: 16px;
+      @include mobile{
+        margin-top: 8px;
+        margin-bottom: 32px;
+      }
+      &:hover{
+        color:$gray;
+      }
+    }
+  }
+  .content-text-ul{
+    max-width: 350px;
+    margin-left: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include mobile{
+      max-width: 567px;
+      margin-left: 0px;
+      margin-top: 8px;
+      align-items: center;
+    }
+    .content-text4{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 52px;
+      @include mobile{
+        margin-bottom: 20px;
+      }
+      h3{
+        @include mobile{
+          margin-bottom: 4px;
+        }
+      }
+      p{
+        font-size: 16px;
+        line-height: 24px;  
+      }
+    }
+    a{
+      display: block;
+      width: 350px;
+      height: 53px;
+      text-decoration: none;
+      color: $black;
+      border: 2px solid $black;
+      border-radius: 30px;
+      font-size: 20px;
+      line-height: 53px;
+      padding-left: 51px;
+      @include mobile{
+        width: 345px;
+        padding-left: 48px;
+      }
+      &:hover{
+        background-color: $black;
+        color: $gold;
+      }
+    }
+  }
+}
+.hot{
+  background-color: $light-gray;
+  padding-bottom: 40px;
+  @include mobile{
+    padding-bottom: 36px;
+  }
+  ul{
+    display: flex;
+    padding-top: 40px;
+    @include mobile{
+      flex-direction: column;
+    }
+    li{
+      @include mobile{
+        margin-right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      img{
+        width: 350px;
+        height: 540px;
+        object-fit: cover;
+        @include mobile{
+          width: 345px;
+          height: 350px;
+        }
+      } 
+      .img-bottom{
+        @include mobile{
+          object-position: bottom;
+        }
+      }
+      .hot-text{
+        width: 345px;
+      }
+      h3{
+        @include mobile{
+          margin-top: 8px;
+        }
+        a{
+          color: $black;
+          text-decoration: none;
+          &:hover{
+            color: $gold;
+          }
+        }
+      }
+      h4{
+        font-size: 16px;
+        line-height: 24px;  
+        margin-bottom: 16px;
+      }
+      p{
+        font-size: 16px;
+        line-height: 24px;  
+        @include mobile{
+          margin-bottom: 32px;
+        }
+        span{
+          text-decoration: line-through;
+          color: $gray;
+        }
+      }
+      .cover{
+        position: relative;
+        .cover-black{
+          width: 350px;
+          height: 540px;
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.3);
+          top:0;
+          @include mobile{
+            width: 345px;
+            height: 350px;
+          }
+          p{
+            padding-top: 252px;
+            padding-left: 125px;
+            font-size: 24px;
+            line-height: 36px;
+            color: $white;  
+            @include mobile{
+              padding-top: 157px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.recycle{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @include mobile{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  display: flex;
+  @include mobile{
+    flex-direction: column;
+  }
+  img{
+    width: 730px;
+    height: 520px;
+    object-fit: cover;
+    margin-right: 30px;
+    @include mobile{
+      max-height: 520px;
+      margin-bottom: 8px;
+    }
+  }
+  .recycle-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+      font-size: 20px;
+      line-height: 30px;
+      span{
+        font-size: 16px;
+        line-height: 24px;
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        @include mobile{
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+    a{
+      font-size: 16px;
+      line-height: 24px;
+      color: $gold;
+      text-decoration: none;
+      &:hover{
+        color: $gray;
+      }
+    }
+  }
+}
+.subscribe{
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  img{
+    position: absolute;
+    object-fit: cover;
+    top: -800px;
+    @include mobile{
+      top: 0px;
+      height: 600px;
+    }
+  }
+  .subscribe-text{
+    position: relative;
+  }
+  .subscribe-text-content{
+    position: absolute;
+    top:312px;
+    max-width: 400px;
+    font-size: 32px;
+    line-height: 48px;
+    color: $gray;
+    @include mobile{
+      max-width: 567px;
+      padding-right: 15px;
+      top: 312px;
+      left: 15px;
+    }
+    h2{
+      margin-bottom: 20px;
+    }
+    input[type="email"]{
+      cursor:pointer;
+      width: 219px;
+      height: 60px;
+      border: 2px solid $brown;
+      border-radius: 4px;
+      padding-left: 16px;
+      @include mobile{
+        width: 216px;
+      }
+    }
+    input[type="submit"]{
+      cursor:pointer;
+      width: 131px;
+      height: 60px;
+      border: 2px solid $brown;
+      background-color: $brown;
+      border-radius: 0px 4px 4px 0px;
+      color: $white;
+      margin-left: -14px;
+      @include mobile{
+        width: 129px;
+      }
+    }
+  }
+}
+.footer{
+  background-color: $brown;
+  color: $white;
+  .footer-text{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    .footer-left{
+      display: flex;
+      align-items: center;
+      @include mobile{
+        margin: 0 auto;
+      }
+      p{
+        padding-top: 10px;
+        margin-left: 20px;
+        font-size: 14px;
+      }
+    }
+    .footer-right{
+      align-items: center;
+      padding-top: 10px;
+      @include mobile{
+          display: none;
+      }
+      a{
+        color: $white;
+        text-decoration: none;
+        font-size: 20px;
+        margin-left: 36px;
+        &:hover{
+          color:$black;
+        }
+      }
+    }
+  }
+}
+// 以下為login頁面css
+.header-login{
+  background-color: $brown;
+  @include mobile{
+    display: none;
+  }
+  .header-login-nav{
+    display: flex;
+    li{
+      margin-right: 28px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      a{
+        font-size: 20px;
+        line-height: 30px;
+        color: $white;
+        text-decoration: none;
+        &:hover{
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.content-login{
+  margin-top: 80px;
+  margin-bottom: 82px;
+  display: flex;
+  @include mobile{
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 106px;
+  }
+  img{
+    width: 730px;
+    height: 730px;
+    margin-right: 30px;
+    @include mobile{
+      height: 220px;
+      margin-bottom: 28px;
+    }
+  }
+  .login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+      margin-bottom: 12px;
+    }
+    label{
+      p{
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      input{
+        background-color: #FFFFFF;
+        border: 1px solid $light-gray-2;
+        border-radius: 4px;
+        width: 350px;
+        height: 38px;
+        padding-left: 12px;
+      }
+      ::placeholder{
+        color: $gray-2;
+      }
+    }
+    .login-button{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 43px;
+      align-items: center;
+      @include mobile{
+        margin-top: 36px;
+      }
+      a{
+        color: $brown;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+        &:hover{
+          color: $black;
+        }
+      }
+      .login-btn-div{
+        .btn-register{
+          border: 1px solid $brown;
+          border-radius: 4px;
+          color: $brown;
+          background: $white;
+          width: 65px;
+          height: 38px;
+          cursor: pointer;
+        }
+        .btn-login{
+          border: 1px solid $brown;
+          border-radius: 4px;
+          color: $white;
+          background: $brown;
+          width: 65px;
+          height: 38px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.mt20{
+  margin-top: 20px;
+}
